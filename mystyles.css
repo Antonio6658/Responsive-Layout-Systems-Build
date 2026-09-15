@@ -19,7 +19,7 @@
     inline-size: 100%;
   }
 
-  img, svg{
+  img{
     max-inline-size: 100%;
     inline-size: 100%;
     display: block;
@@ -73,19 +73,6 @@
     --card-gap: var(--space-sm);
 }
 
-@media(prefers-color-scheme: dark){
-    :root{
-      --background-color: #1e1e1e;
-      --card-color: #2a2a2a;
-      --font-text-color: #ededed;
-      --border: 1px solid #444444;
-    }
-
-    h1,h2,h3{
-      color: #ff6666;
-    }
-  }
-
  body {
     max-inline-size: 1200px;
     margin-inline: auto;
@@ -116,6 +103,18 @@
   main{
     background-color: var(--main-bg-color);
   }
+
+  @media(prefers-color-scheme: dark){
+    :root{
+      --background-color: #1e1e1e;
+      --card-color: #2a2a2a;
+      --font-text-color: #ededed;
+      --border: 1px solid #444444;
+    }
+
+    h1,h2,h3{
+      color: #ff6666;
+    }
 }
 
 @layer layout {
@@ -126,7 +125,7 @@
     margin-block-end: var(--space-md);
   }
 
-  .header{
+  header{
     background-color: var(--primary-color);
     padding-block: var(--space-sm);
     padding-inline: var(--space-md);
@@ -157,7 +156,7 @@
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: var(--space-xl);
     align-items: center;
-    margin-bottom: var(--space-xl);
+    margin-block-end: var(--space-xl);
   }
 
   .card-grid{
@@ -169,73 +168,11 @@
   }
 
   footer{
-    margin-block-start: var(--space-xl); 
+    margin-block-start: 0; 
     padding-block: var(--space-xl); 
     padding-inline: var(--space-xl);
     background-color: var(--primary-color); 
-    color: var(--card-color);
-  }
-}
-
-@layer components {
-  /* Add reusable components such as buttons, cards, callouts, and forms here. */
-  .card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--card-gap);
-    padding: var(--card-padding);
-    background-color: var(--card-color);
-    border: var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--box-shadow-sm);
-  }
-
-
-  @supports not(grid-template-rows: subgrid){
-    .card{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
-
- @container card-grid-container(min-width: 500px){
-  .card{
-    border: 2px solid var(--primary-color);
-    box-shadow: var(--box-shadow-md);
-  }
- }
-
- .card img{
-    border-radius: var(--radius);
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .button {
-    display: inline-block;
-    padding: var(--space-xs) var(--space-sm);
-    border: 2px solid var(--print-black);
-    border-radius: var(--radius);
-    background-color: var(--primary-color);
-    color: var(--card-color);
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .callout{
-    padding: var(--space-md);
-    border-left: 5px solid var(--accent-color);
-    border-radius: var(--radius);
-    background-color: var(--card-color);
-    margin-block-start: var(--space-sm);
-  }
-
-  .site-logo {
-    font-family: var(--headings);
-    color: var(--primary-color);
-    font-size: var(--font-size-lg);
-    text-decoration: none;
+    color: var(--background-color);
   }
 
   @media(max-width: 850px){
@@ -270,8 +207,63 @@
       text-align: center;
     }
   }
+}
 
-/* states  */
+@layer components {
+  /* Add reusable components such as buttons, cards, callouts, and forms here. */
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap);
+    padding: var(--card-padding);
+    background-color: var(--card-color);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow-sm);
+  }
+
+  @container card-grid-container (min-width: 500px) {
+    .card {
+      border: 2px solid var(--primary-color);
+      box-shadow: var(--box-shadow-md);
+    }
+ }
+
+  .card img {
+    border-radius: var(--radius);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .button {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--print-black);
+    border-radius: var(--radius);
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .callout{
+    padding-block: var(--space-md);
+    padding-inline: var(--space-md);
+    border-inline-start: 5px solid var(--accent-color);
+    background-color: var(--card-color);
+    margin-block-start: var(--space-sm);
+  }
+
+  .site-logo {
+    font-family: var(--headings);
+    color: var(--card-color);
+    font-size: var(--font-size-lg);
+    text-decoration: none;
+  }
+  }
+
+
+   /* states  */
 
   nav a:hover{
     color: var(--accent-color);
@@ -282,7 +274,6 @@
     color: var(--background-color);
     border-bottom: 3px solid var(--highlight-color);
   }
-
 
   nav a[aria-current="page"]:hover{
     color: var(--accent-color);
@@ -337,10 +328,16 @@
     opacity: 0.6;
   }
 
+ 
 
 
-
-
+   @supports not(grid-template-rows: subgrid){
+    .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 }
 
 @layer overrides {
