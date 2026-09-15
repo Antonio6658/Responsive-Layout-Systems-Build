@@ -260,6 +260,14 @@
     box-shadow: var(--box-shadow-md);
   }
 
+
+  .card:focus-visible{
+    outline: var(--focus-style);
+    outline-offset: 6px;
+    background-color: var(--background-color);
+    transform: translateY(-4px);
+  }
+  
   .button:hover{
     background-color: var(--card-color);
     color: var(--accent-color);
