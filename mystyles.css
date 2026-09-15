@@ -267,7 +267,7 @@
     background-color: var(--background-color);
     transform: translateY(-4px);
   }
-  
+
   .button:hover{
     background-color: var(--card-color);
     color: var(--accent-color);
@@ -282,6 +282,40 @@
     opacity: 0.6;
   }
 
+  @media(max-width: 850px){
+    article{
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .section1 article .content1{
+      order: 2;
+    }
+
+    .section article img{
+      order: 1;
+    }
+}
+
+  @media(max-width: 950px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media(max-width: 600px){
+    .card-grid{
+      grid-template-columns: 1fr;
+    }
+
+    .nav-container{
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
+  }
+
+  
 }
 
 @layer overrides {
