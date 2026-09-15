@@ -351,32 +351,64 @@
 
 @media print {
   /* Add print improvements here. */
-
-
   body{
     background-color: var(--card-color);
     color: var(--print-black);
+    max-inline-size: 100%;
+    font-size: .9rem;
   }
 
-  header, nav, footer, .button{
+
+  h1 {
+    font-size: var(--font-size-lg);
+  }
+
+  h2 {
+    font-size: var(--font-size-md);
+  }
+
+  h3 {
+    font-size: var(--font-size-sm);
+  }
+
+  header, nav, footer, .button, :focus-visible{
     display: none;
   }
 
-  article, .card-grid{
-    display: block;
+
+  main {
+    background-color: transparent;
   }
-  
-  article, .card {
-    margin-bottom: var(--space-lg);
+
+  article{
+    display: flex;
+    gap: var(--space-lg);
+    margin-block-end: var(--space-lg);
+    break-inside: avoid;
+  }
+
+  article img{
+    max-inline-size: 250px;
+    height: auto;
+  }
+
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xs);
+    break-inside: avoid;
   }
 
   .card{
+    background-color: #ffffff;
     border: 1px solid var(--print-black);
     box-shadow: none; 
+    transform: none;
+    padding: var(--space-xs);
   }
 
   a {
     color: var(--print-black);
+    text-decoration: underline;
   }
   
 }
