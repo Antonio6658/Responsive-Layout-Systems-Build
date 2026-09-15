@@ -103,19 +103,6 @@
   main{
     background-color: var(--main-bg-color);
   }
-
-  @media(prefers-color-scheme: dark){
-    :root{
-      --background-color: #1e1e1e;
-      --card-color: #2a2a2a;
-      --font-text-color: #ededed;
-      --border: 1px solid #444444;
-    }
-
-    h1,h2,h3{
-      color: #ff6666;
-    }
-  }
 }
 
 @layer layout {
@@ -176,7 +163,7 @@
     color: var(--background-color);
   }
 
-  @media(max-width: 850px){
+  @media(max-width: 950px){
     article{
       grid-template-columns: 1fr;
       gap: var(--space-lg);
@@ -394,3 +381,22 @@
   
 }
  
+@media(prefers-color-scheme: dark){
+    :root{
+      --background-color: #121212;
+      --card-color: #2a2a2a;
+      --font-text-color: #ededed;
+      --border: 1px solid #444444;
+      --main-bg-color: #1f1f1f;
+    }
+
+    h1,h2,h3{
+      color: #ff6666;
+    }
+
+    .nav-list a, .site-logo, .content1 a, .text-center{
+      color: var(--font-text-color);
+    }
+
+
+  }
