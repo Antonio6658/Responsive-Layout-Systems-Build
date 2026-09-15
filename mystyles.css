@@ -130,21 +130,19 @@
 
   .nav-list a{
     text-decoration: none;
+    color: var(--background-color);
     font-weight: var(--font-weight-bold);
-  }
-
-  .nav-list a[aria-current= "page"]{
-    border-block-end: 2px solid var(--accent-color);
   }
 
 
   main{
-    padding-inline: var(--space-sm);
+    padding-inline: var(--space-md);
+    padding-block: var(--space-xl);
   }
 
   article{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: var(--space-xl);
     align-items: center;
     margin-bottom: var(--space-xl);
@@ -152,7 +150,7 @@
 
   .card-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-md);
     container-type: inline-size;
     container-name: card-grid-container;
@@ -180,8 +178,17 @@
     box-shadow: var(--box-shadow-sm);
   }
 
-  .card img{
+ @container card-grid-container(min-width: 500px){
+  .card{
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--box-shadow-md);
+  }
+ }
+
+ .card img{
     border-radius: var(--radius);
+    width: 100%;
+    object-fit: cover;
   }
 
   .button {
@@ -200,12 +207,9 @@
     border-left: 5px solid var(--accent-color);
     border-radius: var(--radius);
     background-color: var(--card-color);
+    margin-block-start: var(--space-sm);
   }
 
-  nav a {
-    text-decoration: none;
-    color: var(--card-color);
-  }
   .site-logo {
     font-family: var(--headings);
     color: var(--primary-color);
@@ -242,8 +246,13 @@
   }
 
   nav a[aria-current="page"]{
+    color: var(--background-color);
+    border-bottom: 3px solid var(--highlight-color);
+  }
+
+
+  nav a[aria-current="page"]:hover{
     color: var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
   }
 
   .card:hover{
