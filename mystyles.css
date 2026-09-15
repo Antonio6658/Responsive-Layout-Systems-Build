@@ -73,6 +73,18 @@
     --card-gap: var(--space-sm);
 }
 
+@media(prefers-color-scheme: dark){
+    :root{
+      --background-color: #1e1e1e;
+      --card-color: #2a2a2a;
+      --font-text-color: #ededed;
+      --border: 1px solid #444444;
+    }
+
+    h1,h2,h3{
+      color: #ff6666;
+    }
+  }
 
  body {
     max-inline-size: 1200px;
@@ -131,7 +143,7 @@
   .nav-list a{
     text-decoration: none;
     color: var(--background-color);
-    font-weight: var(--font-weight-bold);
+    font-weight: 700;
   }
 
 
@@ -178,6 +190,15 @@
     box-shadow: var(--box-shadow-sm);
   }
 
+
+  @supports not(grid-template-rows: subgrid){
+    .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
  @container card-grid-container(min-width: 500px){
   .card{
     border: 2px solid var(--primary-color);
@@ -216,29 +237,41 @@
     font-size: var(--font-size-lg);
     text-decoration: none;
   }
+
+  @media(max-width: 850px){
+    article{
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .section1 article .content1{
+      order: 2;
+    }
+
+    .section article img{
+      order: 1;
+    }
 }
 
-@layer utilities {
-
-  .visually-hidden {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    clip-path: inset(50%);
+  @media(max-width: 950px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .text-center{
-    text-align: center;
+  @media(max-width: 600px){
+    .card-grid{
+      grid-template-columns: 1fr;
+    }
+
+    .nav-container{
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
   }
 
-  .muted{
-    color: var(--disabled-option-color);
-  }
-
-  /* states  */
+/* states  */
 
   nav a:hover{
     color: var(--accent-color);
@@ -277,45 +310,37 @@
     transform: translateY(2px);
   }
 
+}
+
+@layer utilities {
+
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .muted{
+    color: var(--disabled-option-color);
+  }
+
   .disabled{
     color: var(--disabled-option-color);
     opacity: 0.6;
   }
 
-  @media(max-width: 850px){
-    article{
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-    }
 
-    .section1 article .content1{
-      order: 2;
-    }
 
-    .section article img{
-      order: 1;
-    }
-}
 
-  @media(max-width: 950px){
-    .card-grid{
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
 
-  @media(max-width: 600px){
-    .card-grid{
-      grid-template-columns: 1fr;
-    }
-
-    .nav-container{
-      flex-direction: column;
-      gap: var(--space-sm);
-      text-align: center;
-    }
-  }
-
-  
 }
 
 @layer overrides {
