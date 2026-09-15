@@ -1,0 +1,309 @@
+/* This is the CSS Architecture for Capstone Project GIT 414 by Antonio Rodriguez Jr 9/7/2026*/
+
+@layer reset, base, layout, components, utilities, overrides;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body{
+    margin:0;
+  }
+
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  img, svg{
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer base {
+  :root {
+    /* Add design tokens here. */
+
+    /* colors  */
+    --primary-color:#550000;
+    --accent-color:#000055;
+    --background-color: #d6cac1;
+    --card-color: #ffffff;
+    --font-text-color: #1f1f1f;
+    --highlight-color: #ffcc00;
+    --print-black: #000000;
+    --disabled-option-color: #999999;
+
+
+
+    /* font properties  */
+    --font-family: 'Inter', Arial, Helvetica, sans-serif;
+    --headings: 'Oswald', sans-serif;
+    --font-size-sm: 1rem;
+    --font-size-md: 1.15rem;
+    --font-size-lg: 1.25rem;
+
+
+    /* padding and spacing properties  */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* box and radius tokens  */
+    --radius: 8px;
+    --border: 1px solid #d2d2c8;
+    --box-shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --box-shadow-md: 0 4px 10px rgba(0,0,0, 0.2);
+
+    /* focus styles  */
+    --focus-style: 3px solid var(--accent-color);
+
+    /* card specific styles  */
+    --card-padding: var(--space-md);
+    --card-gap: var(--space-sm);
+}
+
+
+ body {
+    max-width: 1200px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    background-color: var(--background-color);
+    color: var(--font-text-color);
+  }
+
+  h1, h2, h3{
+    font-family: var(--headings);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+  }
+
+  a{
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+
+  :focus-visible{
+    outline: var(--focus-style);
+    outline-offset: 3px;
+  }
+}
+
+@layer layout {
+  /* Add page-level layout and composition classes here. */
+
+  section{
+    width: 100%;
+    margin-bottom: var(--space-md);
+  }
+
+  header{
+    background-color: var(--primary-color);
+  } 
+
+  .nav-list{
+    display: flex;
+    gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list a{
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .nav-list a[aria-current= "page"]{
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+
+  main{
+    padding: var(--space-sm);
+  }
+
+  article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--space-md);
+
+  }
+
+  footer{
+    margin-top: var(--space-xl); 
+    padding: var(--space-xl); 
+    background-color: var(--primary-color); 
+    color: var(--card-color);
+  }
+}
+
+@layer components {
+  /* Add reusable components such as buttons, cards, callouts, and forms here. */
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap);
+    padding: var(--card-padding);
+    background-color: var(--card-color);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow-sm);
+  }
+
+  .card img{
+    border-radius: var(--radius);
+  }
+
+  .button {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--print-black);
+    border-radius: var(--radius);
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .callout{
+    padding: var(--space-md);
+    border-left: 5px solid var(--accent-color);
+    border-radius: var(--radius);
+    background-color: var(--card-color);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--card-color);
+  }
+  .site-logo {
+    font-family: var(--headings);
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    text-decoration: none;
+  }
+}
+
+@layer utilities {
+
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .muted{
+    color: var(--disabled-option-color);
+  }
+
+  /* states  */
+
+  nav a:hover{
+    color: var(--accent-color);
+    filter: brightness(1.5);
+  }
+
+  nav a[aria-current="page"]{
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+  }
+
+  .card:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-md);
+  }
+
+  .button:hover{
+    background-color: var(--card-color);
+    color: var(--accent-color);
+  }
+
+  .button:active{
+    transform: translateY(2px);
+  }
+
+  .disabled{
+    color: var(--disabled-option-color);
+    opacity: 0.6;
+  }
+
+}
+
+@layer overrides {
+  /* Keep this layer small. Use it only for intentional exceptions. */
+
+  /* to check layout issues
+  *{
+    outline: 1px solid rgba(255,0,0,0.4) !important;
+  }
+
+  to check if text around image looks good or is bleeding over into the image space
+  img{
+    opacity: 0.5 !important
+  }
+
+  to test for contrast and readability
+  body, body *{
+    color: #000 !important;
+    background-color: #fff !important;
+  } */
+}
+
+@media print {
+  /* Add print improvements here. */
+
+
+  body{
+    background-color: var(--card-color);
+    color: var(--print-black);
+  }
+
+  header, nav, footer, .button{
+    display: none;
+  }
+
+  article, .card-grid{
+    display: block;
+  }
+  
+  article, .card {
+    margin-bottom: var(--space-lg);
+  }
+
+  .card{
+    border: 1px solid var(--print-black);
+    box-shadow: none; 
+  }
+
+  a {
+    color: var(--print-black);
+  }
+  
+}
+ 
