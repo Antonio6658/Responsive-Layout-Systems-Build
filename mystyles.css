@@ -21,7 +21,9 @@
 
   img, svg{
     max-inline-size: 100%;
+    inline-size: 100%;
     display: block;
+    height: auto;
   }
 }
 
@@ -36,6 +38,7 @@
     --card-color: #ffffff;
     --font-text-color: #1f1f1f;
     --highlight-color: #ffcc00;
+    --main-bg-color: #ffffb0;
     --print-black: #000000;
     --disabled-option-color: #999999;
 
@@ -97,18 +100,24 @@
     outline: var(--focus-style);
     outline-offset: 3px;
   }
+
+  main{
+    background-color: var(--main-bg-color);
+  }
 }
 
 @layer layout {
   /* Add page-level layout and composition classes here. */
 
   section{
-    width: 100%;
-    margin-bottom: var(--space-md);
+    inline-size: 100%;
+    margin-block-end: var(--space-md);
   }
 
-  header{
+  .header{
     background-color: var(--primary-color);
+    padding-block: var(--space-sm);
+    padding-inline: var(--space-md);
   } 
 
   .nav-list{
@@ -125,17 +134,17 @@
   }
 
   .nav-list a[aria-current= "page"]{
-    border-bottom: 2px solid var(--accent-color);
+    border-block-end: 2px solid var(--accent-color);
   }
 
 
   main{
-    padding: var(--space-sm);
+    padding-inline: var(--space-sm);
   }
 
   article{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: var(--space-xl);
     align-items: center;
     margin-bottom: var(--space-xl);
@@ -143,14 +152,16 @@
 
   .card-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: var(--space-md);
-
+    container-type: inline-size;
+    container-name: card-grid-container;
   }
 
   footer{
-    margin-top: var(--space-xl); 
-    padding: var(--space-xl); 
+    margin-block-start: var(--space-xl); 
+    padding-block: var(--space-xl); 
+    padding-inline: var(--space-xl);
     background-color: var(--primary-color); 
     color: var(--card-color);
   }
