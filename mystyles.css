@@ -115,6 +115,7 @@
     h1,h2,h3{
       color: #ff6666;
     }
+  }
 }
 
 @layer layout {
@@ -181,12 +182,16 @@
       gap: var(--space-lg);
     }
 
-    .section1 article .content1{
-      order: 2;
+    .section1 article{
+      grid-template-areas: "image" "content";
     }
 
-    .section article img{
-      order: 1;
+    .section1 article .content1{
+      grid-area: content;
+    }
+
+    .section1 article img{
+      grid-area: image;
     }
 }
 
@@ -202,6 +207,7 @@
     }
 
     .nav-container{
+      display: flex;
       flex-direction: column;
       gap: var(--space-sm);
       text-align: center;
@@ -259,7 +265,6 @@
     color: var(--card-color);
     font-size: var(--font-size-lg);
     text-decoration: none;
-  }
   }
 
 
@@ -327,9 +332,6 @@
     color: var(--disabled-option-color);
     opacity: 0.6;
   }
-
- 
-
 
    @supports not(grid-template-rows: subgrid){
     .card{
