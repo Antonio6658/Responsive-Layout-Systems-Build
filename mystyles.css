@@ -1,4 +1,29 @@
 /* This is the CSS Architecture for Capstone Project GIT 414 by Antonio Rodriguez Jr 9/7/2026*/
+@font-face {
+  font-family: 'Inter-Fallback';
+  src: local(Arial);
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
+
+
+@font-face {
+  font-family: 'Oswald-Fallback';
+  src: local('Arial Narrow');
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  ascent-override: 112%;
+  descent-override: 28%;
+  line-gap-override: 0%;
+  size-adjust: 87%;
+}
 
 @layer reset, base, layout, components, utilities, overrides;
 
@@ -45,8 +70,8 @@
 
 
     /* font properties  */
-    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
-    --headings: 'Oswald', 'Arial Narrow', 'Impact', sans-serif;
+    --font-family: 'Inter', 'Inter-Fallback', system-ui, -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    --headings: 'Oswald', 'Oswald-Fallback', 'Impact', sans-serif;
     --font-size-sm: 1rem;
     --font-size-md: 1.15rem;
     --font-size-lg: 1.25rem;
@@ -112,6 +137,7 @@
   }
   p{
     max-inline-size: var(--measure);
+    margin-inline: auto;
   }
 }
 
@@ -166,45 +192,45 @@
   }
 
   .iframevid {
-  border-block-start: 1px solid var(--disabled-option-color);
-  padding-block-start: var(--space-xl);  
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: center;
-  width: 100%;            
-  margin-block: var(--space-xl); 
-}
+    border-block-start: 1px solid var(--disabled-option-color);
+    padding-block-start: var(--space-xl);  
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    width: 100%;            
+    margin-block: var(--space-xl); 
+  }
 
-#yt-vid {
-  text-align: center;    
-  max-width: 100%;        
-}
-
-
-iframe {
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; 
-}
+  #yt-vid {
+    text-align: center;    
+    max-width: 100%;        
+  }
 
 
-#fallback-text {
-  margin-top: var(--space-sm);
-  font-size: var(--font-size-sm);
-}
+  iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; 
+  }
 
-#fallback-text a {
-  text-decoration: underline;
-}
 
-.vid-title{
+  #fallback-text {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  #fallback-text a {
+    text-decoration: underline;
+  }
+
+  .vid-title{
     font-size: var(--font-size-md);       
     font-style: italic;                   
     color: var(--accent-color);          
     margin-block-start: var(--space-md); 
     max-inline-size: 65ch;  
-}
+  }
 
   footer{
     margin-block-start: 0; 

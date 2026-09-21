@@ -5,8 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VGC Introduction</title>
   <link rel="stylesheet" href="mystyles.css">
-  <link rel="preload" href="https://fonts.googleapis.com">
-  <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+
+                <!-- Inter FONT NOTES
+                      Source: Google Fonts
+                      License: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+                              This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+                              This license is copied below, and is also available with a FAQ at: https://openfontlicense.org 
+                              SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007-->
+
+                    <!-- Oswald Font notes
+                    Source: Google Fonts
+                    License: Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)
+                              This Font Software is licensed under the SIL Open Font License, Version 1.1 . 
+                              This license is copied below, and is also available with a FAQ at: https://openfontlicense.org
+                              SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 <body>
   <header>
@@ -30,13 +45,16 @@
         <article>
           <div class="content1">
             <h1>Welcome To Competitive Pokemon!</h1>
-            <p>In this site you will get to learn and experience how to play VGC! Which stands for Video Game Championships!</p>
+            <p>In this site you will get to learn and experience how to play <br> VGC: Competitive Pokemon.</p>
             <a href="#" class="button">Resource Guide</a>
           </div>
 
           <!-- ASSET AND PROVENANCE NOTES
             - Source: Unsplash 
-            - License: Unsplash Open Source License
+            - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                      download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                      including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                      This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
             - Purpose: To show how a Pokemon Tournament can be played in big Arenas and venues, decorative.
             - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. with a fallback of the original JPG file -->
             <picture>
@@ -46,8 +64,9 @@
               <source type="image/webp" 
                       srcset="images/gaming-arena-img-sm.webp 600w, images/gaming-arena-img-lg.webp 1200w" 
                       sizes="(max-width: 950px) 100vw, 600px">
-          <img src="images/gaming-arena-img.jpg" alt="packed arena for a concert" width="600" height="400">
+          <img src="images/gaming-arena-img.jpg" alt="packed arena for a concert" width="600" height="400" loading="lazy">
         </picture>
+        </article>
     </section>
 
     <!-- Second Section  -->
@@ -57,7 +76,10 @@
 
           <!-- ASSET AND PROVENANCE NOTES
           - Source: Unsplash 
-          - License: Unsplash Open Source License
+          - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                    download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                    including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                    This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
           - Purpose: to display potential examples of playing the Nintendo Switch and for decoration.
           - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w.  -->
 
@@ -68,12 +90,13 @@
               <source type="image/webp" 
                       srcset="/images/how-to-play-img-sm.webp 600w, /images/how-to-play-img-lg.webp 1200w" 
                       sizes="(max-width: 950px) 100vw, 600px">
-              <img src="/images/how-to-play-img.jpg" alt=" table full of Nintendo products such as a Switch, a controller, and various Pokémon products." width="600" height="400">
+              <img src="/images/how-to-play-img.jpg" alt=" table full of Nintendo products such as a Switch, a controller, and various Pokémon products." width="600" height="400" loading="lazy">
             </picture>
           </div>
           <div>
             <h2>Nintendo Switch 2 / Mobile</h2>
-            <p>Pokemon VGC is played on a platform called Pokemon Champions! This can be downloaded and played for free on the Nintendo Switch and Switch 2, or any modern mobile device!</p>
+            <p>Pokemon VGC is played on a platform called Pokemon Champions! <br>
+              This can be downloaded and played for free on the Nintendo Switch/Switch 2, or any modern mobile device!</p>
             <div class="callout">
               <h3>Important disclaimer</h3>
               <p>In officially held tournaments; Regional, International, and Worlds, you cannot use a mobile device. Champions must be played on a Nintendo product!</p>
@@ -94,13 +117,16 @@
 
               <!-- ASSET AND PROVENANCE NOTES
             - Source: Unsplash 
-            - License: Unsplash Open Source License
+            - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                      download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                      including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                      This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
             - Purpose: To showcase a decorative image for speed control in Pokemon.
             - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. -->
               <picture>
-                <source type="image/avif" srcset="/images/speed-control-img-sm.avif 400w, /images/speed-control-img.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <source type="image/webp" srcset="/images/speed-control-img-sm.webp 400w, /images/speed-control-img.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <img src="/images/speed-control-img.jpg" alt=" Lights traveling through a tunnel, showing speed." width="400" height="250">
+                <source type="image/avif" srcset="/images/speed-control-img-sm.avif 400w, /images/speed-control-img.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <source type="image/webp" srcset="/images/speed-control-img-sm.webp 400w, /images/speed-control-img.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <img src="/images/speed-control-img.jpg" alt=" Lights traveling through a tunnel, showing speed." width="400" height="250" loading="lazy">
               </picture>
               <p>Basics: How to play Competitive Pokemon!</p>
           </div>
@@ -111,13 +137,16 @@
 
               <!-- ASSET AND PROVENANCE NOTES
             - Source: Unsplash 
-            - License: Unsplash Open Source License
+            - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                      download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                      including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                      This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
             - Purpose: a decorative image to show the switch 2
             - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. -->
               <picture>
-                <source type="image/avif" srcset="/images/switch-2-img-sm.avif 400w, /images/switch-2-img.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <source type="image/webp" srcset="/images/switch-2-img-sm.webp 400w, /images/switch-2-img.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <img src="/images/switch-2-img.jpg" alt="Switch 2 console on a concrete background. " width="400" height="250">
+                <source type="image/avif" srcset="/images/switch-2-img-sm.avif 400w, /images/switch-2-img.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <source type="image/webp" srcset="/images/switch-2-img-sm.webp 400w, /images/switch-2-img.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <img src="/images/switch-2-img.jpg" alt="Switch 2 console on a concrete background. " width="400" height="250" loading="lazy">
               </picture>
               <p>Teams: Replica Team codes and breakdowns!</p>
           </div>
@@ -127,13 +156,16 @@
               <h3>Resources</h3>
               <!-- ASSET AND PROVENANCE NOTES
             - Source: Unsplash 
-            - License: Unsplash Open Source License
+            - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                      download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                      including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                      This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
             - Purpose: another speed control decorative example
             - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. -->
               <picture>
-                <source type="image/avif" srcset="/images/speed-control-img (2)-sm.avif 400w, /images/speed-control-img (2)-lg.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <source type="image/webp" srcset="/images/speed-control-img (2)-sm.webp 400w, /images/speed-control-img (2)-lg.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <img src="/images/speed-control-img (2).jpg" alt="Speedometer showing the revs per minute of a car." width="400" height="250">
+                <source type="image/avif" srcset="/images/speed-control-img-2-sm.avif 400w, /images/speed-control-img-2-lg.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <source type="image/webp" srcset="/images/speed-control-img-2-sm.webp 400w, /images/speed-control-img-2-lg.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <img src="/images/speed-control-img-2.jpg" alt="Speedometer showing the revs per minute of a car." width="400" height="250" loading="lazy">
               </picture>
               <p>Resources: A hub for useful information to better your game!</p>
           </div>
@@ -143,13 +175,16 @@
               <h3>Regulation</h3>
               <!-- ASSET AND PROVENANCE NOTES
             - Source: Unsplash 
-            - License: Unsplash Open Source License
+            - License: Unsplash Open Source License - Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to 
+                                                      download, copy, modify, distribute, perform, and use images from Unsplash for free, 
+                                                      including for commercial purposes, without permission from or attributing the photographer or Unsplash. 
+                                                      This license does not include the right to compile images from Unsplash to replicate a similar or competing service.
             - Purpose: A decorative example of how it may look at a Pokemon Regional Championship
             - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. -->
               <picture>
-                <source type="image/avif" srcset="/images/gaming-arena-img (2) - sm.avif 400w, /images/gaming-arena-img (2) - lg.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <source type="image/webp" srcset="/images/gaming-arena-img (2) - sm.webp 400w, /images/gaming-arena-img (2) - lg.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 250px">
-                <img src="images/gaming-arena-img (2).jpg" alt="Pokemon mascot, Pikachu, with spectators at a Pokemon Tournament. " width="400" height="250">
+                <source type="image/avif" srcset="/images/gaming-arena-img-2-sm.avif 400w, /images/gaming-arena-img-2-lg.avif 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <source type="image/webp" srcset="/images/gaming-arena-img-2-sm.webp 400w, /images/gaming-arena-img-2-lg.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 400px">
+                <img src="images/gaming-arena-img-2.jpg" alt="Pokemon mascot, Pikachu, with spectators at a Pokemon Tournament. " width="400" height="250" loading="lazy">
               </picture>
               <p>Regulation: Newest Regulation Information and Tournaments!</p>
           </div>
@@ -162,6 +197,7 @@
     source: YouTube - uploaded by WolfeyVGC
     License: YouTube Broadcast License / Fair Use
     purpose: Supplementary content video guide for Competitive Pokemon basics. -->
+
 <section aria-label="Section Four Iframe video test" class="iframevid"> 
   <h2>Testing for iframe efficiency</h2>
   <div id="yt-vid">
@@ -181,7 +217,8 @@
 
   <footer>
     <p class="text-center">2026 Capstone Project</p>
-    <p class="text-center muted">All Characters and Depictions are the Property of Nintendo and The Pokemon Company. I do not own anything in this site.</p>
+    <p class="text-center muted">All Characters and Depictions are the Property of Nintendo and The Pokemon Company. <br>
+      I do not own anything in this site.</p>
   </footer>
   
 </body>
