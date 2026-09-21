@@ -78,7 +78,7 @@
     margin-inline: auto;
     font-family: var(--font-family);
     font-size: var(--font-size-sm);
-    line-height: 1.5;
+    line-height: 1.6;
     background-color: var(--background-color);
     color: var(--font-text-color);
   }
@@ -88,6 +88,7 @@
     font-weight: 700;
     color: var(--primary-color);
     margin-block-end: var(--space-sm);
+    line-height: 1.15;
   }
 
   a{
@@ -154,6 +155,47 @@
     container-type: inline-size;
     container-name: card-grid-container;
   }
+
+  .iframevid {
+  border-block-start: 1px solid var(--disabled-option-color);
+  padding-block-start: var(--space-xl);  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center;
+  width: 100%;            
+  margin-block: var(--space-xl); 
+}
+
+#yt-vid {
+  text-align: center;    
+  max-width: 100%;        
+}
+
+
+iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; 
+}
+
+
+#fallback-text {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+#fallback-text a {
+  text-decoration: underline;
+}
+
+.vid-title{
+    font-size: var(--font-size-md);       
+    font-style: italic;                   
+    color: var(--accent-color);          
+    margin-block-start: var(--space-md); 
+    max-inline-size: 65ch;  
+}
 
   footer{
     margin-block-start: 0; 
@@ -237,6 +279,10 @@
     color: var(--card-color);
     font-weight: 700;
     text-decoration: none;
+  }
+
+  .callout h3{
+    font-style: italic;
   }
 
   .callout{

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VGC Introduction</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="mystyles.css">
+  <link rel="preload" href="https://fonts.googleapis.com">
+  <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 <body>
   <header>
@@ -82,6 +82,10 @@
         </article>
     </section>
 
+
+
+    <!-- Section Three -->
+
      <section aria-label="Section Three - Card Grid Info">
       <div class="card-grid">
          
@@ -152,9 +156,33 @@
       </div>
     </section>
 
-    
+<!-- Section Four -->
+
+    <!-- Media Provenance notes
+    source: YouTube - uploaded by WolfeyVGC
+    License: YouTube Broadcast License / Fair Use
+    purpose: Supplementary content video guide for Competitive Pokemon basics. -->
+<section aria-label="Section Four Iframe video test" class="iframevid"> 
+  <h2>Testing for iframe efficiency</h2>
+  <div id="yt-vid">
+    <iframe aria-describedby="vid-description" width="560" height="315" src="https://www.youtube.com/embed/Ai3L_iwn5oE?si=DCEwH6N5HE9MIY-L" title="YouTube video player for an introduction to competitive Pokémon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    <div id="fallback-text" class="visually-hidden">
+      <p>This browser does not support embedded iframe videos. Here is a direct link to the intended video:  
+        <a href="https://www.youtube.com/embed/Ai3L_iwn5oE?si=DCEwH6N5HE9MIY-L" target="_blank" rel="noopener">
+          WolfeyVGC - An Introduction to Competitive Pokemon
+        </a>
+      </p>
+    </div>
+  </div>
+  <p class="vid-title">This is an introductory video made by WolfeyVGC for playing Competitive Pokemon.</p>
+</section>
   </main>
+
+
   <footer>
+    <p class="text-center">2026 Capstone Project</p>
+    <p class="text-center muted">All Characters and Depictions are the Property of Nintendo and The Pokemon Company. I do not own anything in this site.</p>
   </footer>
+  
 </body>
 </html>
