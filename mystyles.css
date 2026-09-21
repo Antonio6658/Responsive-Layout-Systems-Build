@@ -45,19 +45,25 @@
 
 
     /* font properties  */
-    --font-family: 'Inter', Arial, Helvetica, sans-serif;
-    --headings: 'Oswald', sans-serif;
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+    --headings: 'Oswald', 'Arial Narrow', 'Impact', sans-serif;
     --font-size-sm: 1rem;
     --font-size-md: 1.15rem;
     --font-size-lg: 1.25rem;
 
 
+    /* line height */
+    --line-height-body: 1.6;
+    --line-height-headings: 1.15;
+
+    --measure: 68ch;
+
     /* padding and spacing properties  */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
+    --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+    --space-sm: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
+    --space-md: clamp(1rem, 0.85rem + 0.75vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 1.35rem + 1vw, 2rem);
+    --space-xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
 
     /* box and radius tokens  */
     --radius: 8px;
@@ -78,7 +84,7 @@
     margin-inline: auto;
     font-family: var(--font-family);
     font-size: var(--font-size-sm);
-    line-height: 1.6;
+    line-height: var(--line-height-body);
     background-color: var(--background-color);
     color: var(--font-text-color);
   }
@@ -88,7 +94,7 @@
     font-weight: 700;
     color: var(--primary-color);
     margin-block-end: var(--space-sm);
-    line-height: 1.15;
+    line-height: var(--line-height-headings);
   }
 
   a{
@@ -103,6 +109,9 @@
 
   main{
     background-color: var(--main-bg-color);
+  }
+  p{
+    max-inline-size: var(--measure);
   }
 }
 
@@ -472,7 +481,7 @@ iframe {
       color: #ff6666;
     }
 
-    .nav-list a, .site-logo, .content1 a, .text-center{
+    .nav-list a, .site-logo, .content1 a, .text-center, .vid-title{
       color: var(--font-text-color);
     }
   }
