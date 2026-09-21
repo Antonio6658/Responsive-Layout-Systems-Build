@@ -49,6 +49,7 @@
     inline-size: 100%;
     display: block;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -138,6 +139,10 @@
   p{
     max-inline-size: var(--measure);
     margin-inline: auto;
+  }
+  picture{
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -254,17 +259,17 @@
       grid-area: content;
     }
 
-    .section1 article img{
+    .section1 article picture{
       grid-area: image;
+      justify-self: center;
+      width: 100%;
+      max-width: 600px;
     }
-}
 
-  @media(max-width: 950px){
     .card-grid{
       grid-template-columns: repeat(2, 1fr);
     }
-  }
-
+}
   @media(max-width: 600px){
     .card-grid{
       grid-template-columns: 1fr;
@@ -301,8 +306,7 @@
 
   .card img {
     border-radius: var(--radius);
-    width: 100%;
-    object-fit: cover;
+    max-width: 100%;
   }
 
   .button {
