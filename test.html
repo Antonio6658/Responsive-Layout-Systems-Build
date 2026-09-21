@@ -24,6 +24,31 @@
     </div>
   </header>
   <main>
+
+    <!-- First Section -->
+    <section aria-label="Section One Info - Intro to Pokemon" class="section1">
+        <article>
+          <div class="content1">
+            <h1>Welcome To Competitive Pokemon!</h1>
+            <p>In this site you will get to learn and experience how to play VGC! Which stands for Video Game Championships!</p>
+            <a href="#" class="button">Resource Guide</a>
+          </div>
+
+          <!-- ASSET AND PROVENANCE NOTES
+            - Source: Unsplash 
+            - License: Unsplash Open Source License
+            - Purpose: To show how a Pokemon Tournament can be played in big Arenas and venues, decorative.
+            - Optimization: splitting the files into two modern formats avif and webp. 600w and 1200w. with a fallback of the original JPG file -->
+            <picture>
+              <source type="image/avif" 
+                      srcset="images/gaming-arena-img-sm.avif 600w, images/gaming-arena-img-lg.avif 1200w" 
+                      sizes="(max-width: 950px) 100vw, 600px">
+              <source type="image/webp" 
+                      srcset="images/gaming-arena-img-sm.webp 600w, images/gaming-arena-img-lg.webp 1200w" 
+                      sizes="(max-width: 950px) 100vw, 600px">
+          <img src="images/gaming-arena-img.jpg" alt="packed arena for a concert" width="600" height="400">
+        </picture>
+    </section>
   </main>
   <footer>
   </footer>
