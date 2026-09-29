@@ -218,6 +218,9 @@
     grid-column: 1 / -1;
   }
 
+   .top-pkmn{
+    grid-column: 1;
+   } 
    .top-teams{
     grid-column: 2;
    }
@@ -474,7 +477,19 @@
   }
 
 
- 
+  /* #my-chart {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  #my-chart .bar {
+  
+  }
+
+  #my-chart .legend {
+  
+  } */
 
    /* states  */
 
@@ -492,13 +507,33 @@
     color: var(--accent-color);
   }
 
-  .card:hover{
+  .card:focus-visible,
+  .type-chrt:focus-visible,
+  .speedcntrl:focus-visible, 
+  .how2:focus-visible,
+  .curr-reg:focus-visible,
+  .calndr:focus-visible,
+  .top-pkmn:focus-visible,
+  .top-teams:focus-visible,
+  .team-arch:focus-visible,
+  .resource:focus-visible,
+  .iframevid:focus-visible{
     transform: translateY(-2px);
     box-shadow: var(--box-shadow-md);
   }
 
 
-  .card:focus-visible{
+  .card:focus-visible,
+  .type-chrt:focus-visible,
+  .speedcntrl:focus-visible, 
+  .how2:focus-visible,
+  .curr-reg:focus-visible,
+  .calndr:focus-visible,
+  .top-pkmn:focus-visible,
+  .top-teams:focus-visible,
+  .team-arch:focus-visible,
+  .resource:focus-visible,
+  .iframevid:focus-visible{
     outline: var(--focus-style);
     outline-offset: 6px;
     background-color: var(--background-color);
@@ -517,6 +552,8 @@
   .tablewrapper tbody tr:hover td {
     background-color: var(--highlight-color) ;
   }
+
+  
 }
 
 @layer utilities {
@@ -526,7 +563,7 @@
     inline-size: 1px;
     block-size: 1px;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     clip-path: inset(50%);
   }
@@ -644,13 +681,17 @@
       --font-text-color: #ededed;
       --border: 1px solid #444444;
       --main-bg-color: #1f1f1f;
+      --highlight-color: #5e5e5e;
+      --focus-style: 3px solid #ffffff;
     }
 
     h1,h2,h3{
       color: #ff6666;
     }
 
-    .nav-list a, .site-logo, .content1 a, .text-center, .vid-title{
+    .nav-list a, .site-logo, .content1 a, .text-center, .vid-title, .arch-list li, th, .button{
       color: var(--font-text-color);
     }
+
+    
   }
