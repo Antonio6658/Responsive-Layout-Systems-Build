@@ -162,6 +162,7 @@
 
   .nav-list{
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
     list-style: none;
     margin: 0;
@@ -237,7 +238,7 @@
 
   /* media queries for grids and content */
 
-  @media(max-width: 1100px){
+  @media(max-width: 950px){
 
     /* To help fix the responsiveness of the tables and content sections for basics.html and regulation.html */
     .team-arch, 
@@ -377,8 +378,9 @@
     border: var(--border);
     border-radius: var(--radius);
     box-shadow: var(--box-shadow-sm);
+    container-type: inline-size;
+    container-name: section-container;
   }
-
 
   /* emphasis on key words */
   .choice{
@@ -389,6 +391,7 @@
   /* styles for team archetype list */
   .arch-list{
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-lg);
     align-items: flex-start;
   }
@@ -402,9 +405,10 @@
     border-radius: var(--radius);
     max-width: 100%;
     list-style-type: square;  
+    box-sizing: border-box;
   }
   .arch-list p{
-    flex: 1;
+    flex: 2 1 200px;
     max-inline-size: var(--measure);
   }
 
@@ -487,7 +491,20 @@
   .tablewrapper tbody tr:last-child td {
     border-bottom: none;
   }
-  
+
+  @container section-container (max-width: 600px){
+    .tablewrapper table{
+      font-size: 0.85rem;
+    }
+
+    .tablewrapper th{
+      padding: var(--space-xs);
+    }
+
+    .tablewrapper td{
+      padding: var(--space-xs);
+    }
+  }
 
   /* highlighting the first section of descriptive content on regulation.html */
   .curr-reg{
