@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="A tutorial and resource website to learn about playing competitive Pokemon.">
+  <meta name="description" content="Do you want to learn more from the top trainers in the field? This page has links to videos to help you learn more about the game.">
   <meta name="author" content="Antonio Rodriguez Jr">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VGC Introduction: Watch these resource videos.</title>
   <link rel="stylesheet" href="mystyles.css">
-
+  <link rel="canonical" href="https://vgcintroduction.com/resources.html">
   <meta property="og:title" content="Competitive Pokemon VGC Video Resources" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="A comprehensive introduction to Pokemon VGC. These guides are given by World Champions and knowledgeable trainers." />
   <meta property="og:url" content="https://www.vgcintroduction.com" />
-  <!-- going to add an image here of the Pokemon Champions Title Image when playing the game
-  <meta property="og:image" content="" />  -->
+  <meta property="og:image" content="https://www.vgcintroduction.com" /> <!-- add specific image for og property -->
 
-  <!-- need to add image links for thumbnails for video -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +31,7 @@
           "description": "An introductory video made by WolfeyVGC for playing Competitive Pokemon.",
           "thumbnailUrl": "https://example.com",
           "uploadDate": "2026-04-01T08:00:00Z",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/xjX8DVfk7IY"
+          "embedUrl": "https://www.youtube-nocookie.com/embed/xjX8DVfk7IY?si=Hl7BbD4qXtJ7lg2P"
         }
       },
       {
@@ -44,12 +43,14 @@
           "description": "An informational video by TheBattleRoom on how to create teams yourself in competitive Pokemon.",
           "thumbnailUrl": "https://example.com",
           "uploadDate": "2026-04-01T08:00:00Z",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/I9bXHtYnzGY"
+          "embedUrl": "https://www.youtube-nocookie.com/embed/I9bXHtYnzGY?si=I6RglsebgelO90uD"
         }
       }
     ]
-  }
-  </script>
+  } 
+  </script>  
+ 
+  
                 <!-- Inter FONT NOTES
                       Source: Google Fonts
                       License: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
@@ -76,7 +77,7 @@
         <ul class="nav-list">
           <li><a href="/index.html">Home</a></li>
           <li><a href="/basics.html">Basics</a></li>
-          <li><a href="regulation.html">Regulation</a></li>
+          <li><a href="/regulation.html">Regulation</a></li>
           <li><a aria-current="page" href="#">Resources</a></li>
           
         </ul>
@@ -86,8 +87,9 @@
   <main>
     
     <section class="resource" tabindex="0">
-        <h1>Resources</h1>
+        <h1>Video Resources for improvement!</h1>
         <p>This page has a collection of good resources to consume to increase your knowledge of competitive Pokemon.</p>
+        <p>Do you need to learn the <a href="/basics.html">basics?</a></p>
     </section>
     <article>
         <!-- Section one -->
@@ -100,7 +102,7 @@
         <section class="iframevid" tabindex="0"> 
             <h2>Introduction to Competitive Pokemon</h2>
             <div id="yt-vid">
-                <iframe aria-describedby="vid-description" width="560" height="315" src="https://www.youtube-nocookie.com/embed/xjX8DVfk7IY?si=Hl7BbD4qXtJ7lg2P" title="YouTube video player for an introduction to competitive Pokémon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <iframe aria-describedby="vid-desc1" width="560" height="315" src="https://www.youtube-nocookie.com/embed/xjX8DVfk7IY?si=Hl7BbD4qXtJ7lg2P" title="YouTube video player for an introduction to competitive Pokémon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                 <div id="fallback-text" class="visually-hidden">
                 <p>This browser does not support embedded iframe videos. Here is a direct link to the intended video:  
                     <a href="https://www.youtube.com/watch?v=xjX8DVfk7IY" target="_blank" rel="noopener">
@@ -109,7 +111,7 @@
                 </p>
                 </div>
             </div>
-            <p class="vid-title">This is an introductory video made by WolfeyVGC for playing Competitive Pokemon.</p>
+            <p id="vid-desc1" class="vid-title">This is an introductory video made by WolfeyVGC for playing Competitive Pokemon.</p>
         </section>
 
         <!-- Section two -->
@@ -122,7 +124,7 @@
         <section class="iframevid" tabindex="0"> 
             <h2>Team Building</h2>
             <div id="yt-vid">
-                <iframe aria-describedby="vid-description" width="560" height="315" src="https://www.youtube-nocookie.com/embed/I9bXHtYnzGY?si=I6RglsebgelO90uD" title="YouTube video player for building a VGC Pokemon team." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <iframe aria-describedby="vid-desc2" width="560" height="315" src="https://www.youtube-nocookie.com/embed/I9bXHtYnzGY?si=I6RglsebgelO90uD" title="YouTube video player for building a VGC Pokemon team." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                 <div id="fallback-text" class="visually-hidden">
                 <p>This browser does not support embedded iframe videos. Here is a direct link to the intended video:  
                     <a href="https://www.youtube.com/watch?v=I9bXHtYnzGY" target="_blank" rel="noopener">
@@ -131,7 +133,7 @@
                 </p>
                 </div>
             </div>
-            <p class="vid-title">This is an informational video by TheBattleRoom on how to create teams yourself in competitive Pokemon.</p>
+            <p id="vid-desc2" class="vid-title">This is an informational video by TheBattleRoom on how to create teams yourself in competitive Pokemon.</p>
         </section>
     </article>
   </main>

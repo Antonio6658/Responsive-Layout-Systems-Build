@@ -115,7 +115,7 @@
     color: var(--font-text-color);
   }
 
-  h1, h2, h3{
+  h1, h2, h3, caption{
     font-family: var(--headings);
     font-weight: 700;
     color: var(--primary-color);
@@ -458,12 +458,11 @@
   }
 
   .tablewrapper caption {
-    padding: var(--space-sm);
+    padding-block-end: var(--space-sm);
+    font-size: var(--font-size-lg);
+    font-family: (--headings);
     text-align: left;
     background-color: var(--card-color);
-  }
-
-  .tablewrapper caption h2 {
     margin-bottom: 0;
   }
 
@@ -511,25 +510,6 @@
     border: 2px solid var(--primary-color);
     box-shadow: var(--box-shadow-md);
   }
-
-
-
-  /* unfinished work, going to create a chart for data on speed control and maybe a table for type advantages */
-
-  /* #my-chart {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  #my-chart .bar {
-  
-  }
-
-  #my-chart .legend {
-  
-  } */
-
 
    /* states  */
 
@@ -668,7 +648,7 @@
     font-size: var(--font-size-lg);
   }
 
-  h2 {
+  h2, caption {
     font-size: var(--font-size-md);
   }
 
@@ -731,7 +711,7 @@ dark mode preferred style choices */
       --focus-style: 3px solid #ffffff;
     }
 
-    h1,h2,h3{
+    h1,h2,h3,caption{
       color: #ff6666;
     }
 
