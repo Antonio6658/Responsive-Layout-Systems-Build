@@ -126,6 +126,7 @@
   a{
     font-weight: 700;
     color: var(--accent-color);
+    text-decoration: none;
   }
 
   :focus-visible{
@@ -328,7 +329,7 @@
     }
  }
 
-  .arch-list img{
+  .arch-list img, .type-advt img{
     border-radius: var(--radius);
     max-width: 100%;
   }
