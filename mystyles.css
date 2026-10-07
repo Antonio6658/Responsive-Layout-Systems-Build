@@ -241,6 +241,23 @@
     color: var(--background-color);
   }
 
+  .group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    grid-template-areas: "content" "image";
+  }
+
+  .main-content{
+    grid-area: "content";
+
+  }
+
+  .image img{
+    grid-area: "image";
+    border-radius: var(--radius);
+    max-width: 600px;
+  }
 
   /* media queries for grids and content */
 
@@ -282,7 +299,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .content-grid{
+    .content-grid, .group{
       grid-template-columns: 1fr;
       gap: var(--space-lg);
     }
