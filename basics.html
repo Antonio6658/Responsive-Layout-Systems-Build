@@ -55,7 +55,8 @@
 
         <!-- speed control section -->
         <section class="speedctrl" tabindex="0">
-            <h2>Speed Control</h2>
+            <h2>Speed Control Information</h2>
+
             <p>As mentioned previously, speed control is an important part of the game. Moving before your opponent opens up opportunities to win the match as quickly as possible. There are several aspects to speed control.</p>
             <ul>
                 <li>The Pokemon's natural speed</li>
@@ -63,17 +64,44 @@
                 <li>Items</li>
                 <li>Speed manipulation moves</li>
             </ul>
+
+            <h3>Natural Speed Tiers in Pokemon VGC</h3>
+            <div class="tablewrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Fastest</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">Slowest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>151</td>
+                    <td>100</td>
+                    <td>20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
             <p>Pokemon have speed stats and the higher the speed stat means you naturally can move faster than other Pokemon. The reference image showcases the fastest Pokemon in the current regulation.
             Priority moves are special moves that override natural speed to go before all other Pokemon. These moves do damage or influence the game in a certain way. These moves work for speed control because of the guarantees that they come with. 
             There is an item called a <span class="choice">choice scarf</span>, this item gives a Pokemon a 50% boost to their speed stat, but locks the user into the first move they select as long as they are on the field.
             The last aspect is speed manipulation moves. The two I will mention are tailwind and trick room. Tailwind gives your team double their speed for 4 total turns. Trick room reverses the speed order, so slower Pokemon move first. This last for 5 turns.
             Speed control is a crucial aspect of the game because moving before your opponent will give you an advantage to win the game.</p>
             <p>Learn more about <a href="/regulation.html#top-teams">Top Teams</a>.</p>
+
         </section>
 
         <!-- type chart section -->
-        <section class="type-chrt" tabindex="0">
-            <h2>Type Chart</h2>
+        <section class="type-advt" tabindex="0">
+            <h2>Typing Advantages</h2>
+            <picture>
+              <source/>
+              <img src="/images/pokeball-img.jpg" alt="A computer desk with a keyboard and a replica Pokeball in the front left of the image" width="400" height="250" loading="lazy"/>
+            </picture>
             <p>Typing advantages are extremely important to understand when approaching Pokemon battles. At the core, a way to understand this is with Fire, Water, and Grass types. 
             They create a circular relationship. Fire beats grass but loses to water. Water beats fire but loses to grass. Grass beats water but loses to fire. 
             This relationship persists throughout the rest of the type chart. There are always types that lose to others, beat others, and resist others. This type chart should be referenced until you understand most of the interactions.
@@ -81,6 +109,105 @@
             This would mean that grass damage does neutral damage because the resist cancels the weakness. The opposite is true as well. 
             A Pokemon that is Dragon / Fighting gains a 4x weakness to fairy types because fairy is super effective against both dragon and fighting types.
             Typing is always a core concept of Pokemon battles that all trainers have to be familiar with.</p>
+        </section>
+        <section class="chart">
+          <div class="tablewrapper">
+              <table>
+                <caption>Top 10 Most Common Types in VGC</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Defensive Weaknesses</th>
+                    <th scope="col">Attacking Super-Effectiveness</th>
+                    <th scope="col">Attacking Resistance</th>
+                    <th scope="col">Defensive Resistance</th>
+                    <th scope="col">Immunity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dragon</td>
+                    <td>Ice / Dragon / Fairy</td>
+                    <td>Dragon</td>
+                    <td>Steel</td>
+                    <td>Fire / Water / Electric / Grass</td>
+                    <td>No effect on Fairy Pokemon</td>
+                  </tr>
+                  <tr>
+                    <td>Fire</td>
+                    <td>Water / Ground / Rock</td>
+                    <td>Grass / Ice / Bug / Steel</td>
+                    <td>Fire / Water / Rock / Dragon</td>
+                    <td>Fire / Grass / Ice / Bug / Steel / Fairy</td>
+                    <td>None</td>
+                  </tr>
+                  <tr>
+                    <td>Fairy</td>
+                    <td>Poison / Steel</td>
+                    <td>Fighting / Dragon / Dark</td>
+                    <td>Fire / Poison / Steel</td>
+                    <td>Fighting / Bug / Dark</td>
+                    <td>No effect from Dragon moves</td>
+                  </tr>
+                  <tr>
+                    <td>Water</td>
+                    <td>Electric / Grass</td>
+                    <td>Fire / Ground / Rock</td>
+                    <td>Water / Grass / Dragon</td>
+                    <td>Fire / Water / Ice / Steel</td>
+                    <td>None</td>
+                  </tr>
+                  <tr>
+                    <td>Grass</td>
+                    <td>Fire / Ice / Poison / Flying / Bug</td>
+                    <td>Water / Ground / Rock</td>
+                    <td>Fire / Grass / Poison / Flying / Bug / Dragon / Steel</td>
+                    <td>Water / Electric / Grass / Ground</td>
+                    <td>None</td>
+                  </tr>
+                  <tr>
+                    <td>Steel</td>
+                    <td>Fire / Fighting / Ground</td>
+                    <td>Ice / Rock / Fairy</td>
+                    <td>Fire / Water / Electric / Steel</td>
+                    <td>Normal / Grass / Ice / Flying / Psychic / Bug / Rock / Dragon / Steel / Fairy</td>
+                    <td>None</td>
+                  </tr>
+                  <tr>
+                    <td>Ground</td>
+                    <td>Water / Grass / Ice</td>
+                    <td>Fire / Electric / Poison / Rock / Steel</td>
+                    <td>Grass / Bug</td>
+                    <td>Poison / Rock</td>
+                    <td>No effect on Flying Pokemon</td>
+                  </tr>
+                  <tr>
+                    <td>Psychic</td>
+                    <td>Bug / Ghost / Dark</td>
+                    <td>Fighting / Poison</td>
+                    <td>Psychic / Steel</td>
+                    <td>Fighting / Psychic</td>
+                    <td>No effect on Dark Pokemon</td>
+                  </tr>
+                  <tr>
+                    <td>Ghost</td>
+                    <td>Ghost / Dark</td>
+                    <td>Psychic / Ghost</td>
+                    <td>Dark</td>
+                    <td>Poison / Bug</td>
+                    <td>No effect from Fighting / Normal. No effect on Normal</td>
+                  </tr>
+                  <tr>
+                    <td>Rock</td>
+                    <td>Water / Grass / Fighting / Ground / Steel</td>
+                    <td>Fire / Ice / Flying / Bug</td>
+                    <td>Fighting / Ground / Steel</td>
+                    <td>Normal / Fire / Poison / Flying</td>
+                    <td>None</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
         </section>
     </article>
   </main>
