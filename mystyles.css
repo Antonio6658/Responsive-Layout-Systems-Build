@@ -207,21 +207,26 @@
     align-items: stretch;
     margin-block-end: var(--space-xl);
   }
+
   .how2, .calndr, .curr-reg, .team-arch, .chart{
     grid-column: 1 / -1;
   }
 
-   .top-pkmn{
+  .top-pkmn{
     grid-column: 1;
    } 
-   .top-teams{
+
+  .top-teams{
     grid-column: 2;
    }
-  
   
   .how2 p, .curr-reg p, .content-grid p, .arch-list p, .team-arch p, .resource p{
     margin-inline: 0;
     max-inline-size: 80ch;
+  }
+
+  .content1 p, .main-content p{
+    margin-inline: 0;
   }
 
   .top-teams h3, .top-pkmn h3{
@@ -309,11 +314,7 @@
       background-color: var(--card-color);
       border: var(--border);
       border-radius: var(--radius);
-      box-shadow: var(--box-shadow-sm);
       align-items: stretch;
-    }
-
-    .card {
       border: 2px solid var(--primary-color);
       box-shadow: var(--box-shadow-md);
     }
@@ -451,6 +452,15 @@
     color: var(--card-color);
     font-size: var(--font-size-lg);
     text-decoration: none;
+  }
+
+  .content1, .main-content{
+    padding: var(--space-sm);
+    background-color: var(--card-color);
+    border: var(--border);
+    border-radius: var(--radius);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--box-shadow-md);
   }
 
 
