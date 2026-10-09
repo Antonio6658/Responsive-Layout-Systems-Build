@@ -46,7 +46,6 @@
 
   img{
     max-inline-size: 100%;
-    inline-size: 100%;
     display: block;
     height: auto;
     object-fit: cover;
@@ -258,66 +257,6 @@
     border-radius: var(--radius);
     max-width: 600px;
   }
-
-  /* media queries for grids and content */
-
-  @media(max-width: 950px){
-
-    /* To help fix the responsiveness of the tables and content sections for basics.html and regulation.html */
-    .team-arch, 
-    .top-teams,
-    .how2, 
-    .curr-reg, 
-    .top-pkmn, 
-    .calndr {
-      grid-column: 1 / -1;
-    }
-  }
-
-  @media(max-width: 950px){
-    article{
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-    }
-
-    .section1 article{
-      grid-template-areas: "image" "content";
-    }
-
-    .section1 article .content1{
-      grid-area: content;
-    }
-
-    .section1 article picture{
-      grid-area: image;
-      justify-self: center;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .card-grid{
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .content-grid, .group{
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-    }
-
-    
-}
-  @media(max-width: 600px){
-    .card-grid, .content-grid{
-      grid-template-columns: 1fr;
-    }
-
-    .nav-container{
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
-      text-align: center;
-    }
-  }
 }
 
 @layer components {
@@ -416,28 +355,33 @@
 
   /* styles for team archetype list */
   .arch-list{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
-    align-items: flex-start;
+    align-items: start;
   }
 
   .arch-list ul {
-    flex: 0 0 auto;
     margin: 0;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     font-size: var(--font-size-lg);
     color:var(--accent-color);
     border: 2px solid var(--primary-color);
     border-radius: var(--radius);
     max-width: 100%;
-    list-style-type: square;  
+    list-style-type: square;
+    list-style-position: inside;  
     box-sizing: border-box;
   }
 
+  .arch-details{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
   .arch-list p{
-    flex: 2 1 200px;
-    max-inline-size: var(--measure);
+    max-inline-size: 50ch;
   }
 
   .button {
@@ -730,6 +674,68 @@
   }
   
 }
+
+/* media queries for grids and content */
+
+  @media(max-width: 950px){
+
+    /* To help fix the responsiveness of the tables and content sections for basics.html and regulation.html */
+    .team-arch, 
+    .top-teams,
+    .how2, 
+    .curr-reg, 
+    .top-pkmn, 
+    .calndr {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media(max-width: 950px){
+    article{
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .section1 article{
+      grid-template-areas: "image" "content";
+    }
+
+    .section1 article .content1{
+      grid-area: content;
+    }
+
+    .section1 article picture{
+      grid-area: image;
+      justify-self: center;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid, .group{
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    
+}
+
+@media(max-width: 600px){
+    .arch-list, .card-grid, .content-grid{
+      grid-template-columns: 1fr;
+    }
+
+    .nav-container{
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
+  }
+
  
 /* 
 dark mode preferred style choices */
