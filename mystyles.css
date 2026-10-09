@@ -244,19 +244,29 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    grid-template-areas: "content" "image";
+    grid-template-areas: "content image";
+    align-items: center;
   }
 
-  .main-content{
-    grid-area: "content";
-
+  .tips-tricks{
+    grid-area: content;
   }
+
+  .image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .image img{
-    grid-area: "image";
     border-radius: var(--radius);
-    max-width: 600px;
+    max-width: 100%;
+    height: auto;
   }
+
+
 }
 
 @layer components {
@@ -508,39 +518,6 @@
     color: var(--accent-color);
   }
 
-
-
-  /* To create visible focus styles on main content on all pages to allow for easier navigation with a keyboard */
-
-
-  .card:focus-visible,
-  .type-advt:focus-visible,
-  .speedcntrl:focus-visible, 
-  .how2:focus-visible,
-  .curr-reg:focus-visible,
-  .calndr:focus-visible,
-  .top-pkmn:focus-visible,
-  .top-teams:focus-visible,
-  .team-arch:focus-visible{
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow-md);
-  }
-
-  .card:focus-visible,
-  .type-advt:focus-visible,
-  .speedcntrl:focus-visible, 
-  .how2:focus-visible,
-  .curr-reg:focus-visible,
-  .calndr:focus-visible,
-  .top-pkmn:focus-visible,
-  .top-teams:focus-visible,
-  .team-arch:focus-visible{
-    outline: var(--focus-style);
-    outline-offset: 6px;
-    background-color: var(--background-color);
-    transform: translateY(-4px);
-  }
-
   .tablewrapper tbody tr:hover td {
     background-color: var(--highlight-color) ;
   }
@@ -715,16 +692,26 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .content-grid, .group{
+    .content-grid{
       grid-template-columns: 1fr;
       gap: var(--space-lg);
     }
 
+    .group{
+      grid-template-columns: 1fr;
+      grid-template-areas: "content"
+                            "image";
+      gap: var(--space-md);
+    }
+
+    .image img{
+      max-width: 100%;
+    }
     
 }
 
 @media(max-width: 600px){
-    .arch-list, .card-grid, .content-grid{
+   .arch-list, .card-grid, .content-grid{
       grid-template-columns: 1fr;
     }
 
@@ -734,6 +721,7 @@
       gap: var(--space-sm);
       text-align: center;
     }
+
   }
 
  
@@ -748,6 +736,7 @@ dark mode preferred style choices */
       --main-bg-color: #1f1f1f;
       --highlight-color: #5e5e5e;
       --focus-style: 3px solid #ffffff;
+
     }
 
     h1,h2,h3,caption{
@@ -758,5 +747,8 @@ dark mode preferred style choices */
       color: var(--font-text-color);
     }
 
+    a{
+      color: #00ffff;
+    }
     
   }
