@@ -278,7 +278,6 @@
       gap: var(--card-gap);
       padding: var(--card-padding);
       background-color: var(--card-color);
-      border: var(--border);
       border-radius: var(--radius);
       align-items: stretch;
       border: 2px solid var(--primary-color);
@@ -428,7 +427,6 @@
   .content1, .main-content{
     padding: var(--space-sm);
     background-color: var(--card-color);
-    border: var(--border);
     border-radius: var(--radius);
     border: 2px solid var(--primary-color);
     box-shadow: var(--box-shadow-md);
@@ -451,7 +449,7 @@
   .tablewrapper caption {
     padding-block-end: var(--space-sm);
     font-size: var(--font-size-lg);
-    font-family: (--headings);
+    font-family: var(--headings);
     text-align: left;
     background-color: var(--card-color);
     margin-bottom: 0;
@@ -487,14 +485,17 @@
       font-size: 0.85rem;
     }
 
-    .tablewrapper th{
+    .tablewrapper th,.tablewrapper td{
       padding: var(--space-xs);
     }
 
-    .tablewrapper td{
-      padding: var(--space-xs);
-    }
   }
+
+
+  /* hero image styles */
+
+  
+
 
   /* highlighting the first section of descriptive content on regulation.html */
   .curr-reg{
