@@ -651,6 +651,7 @@
 
 /* media queries for grids and content */
 
+
   @media(max-width: 950px){
 
     /* To help fix the responsiveness of the tables and content sections for basics.html and regulation.html */
@@ -662,9 +663,7 @@
     .calndr {
       grid-column: 1 / -1;
     }
-  }
 
-  @media(max-width: 950px){
     article{
       grid-template-columns: 1fr;
       gap: var(--space-lg);
