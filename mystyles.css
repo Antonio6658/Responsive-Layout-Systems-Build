@@ -329,7 +329,7 @@
     container-name: section-container;
   }
 
-  #yt-vid {  
+  .yt-vid {  
     max-width: 100%;        
   }
 
@@ -339,12 +339,12 @@
     aspect-ratio: 16 / 9; 
   }
 
-  #fallback-text {
+  .fallback-text {
     margin-top: var(--space-sm);
     font-size: var(--font-size-sm);
   }
 
-  #fallback-text a {
+  .fallback-text a {
     text-decoration: underline;
   }
 
@@ -491,10 +491,6 @@
 
   }
 
-
-  /* hero image styles */
-
-  
 
 
   /* highlighting the first section of descriptive content on regulation.html */
